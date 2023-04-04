@@ -1,3 +1,22 @@
 body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1A2332;
+}
+
+.card {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, .5);
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition: .6s;
+}
+
+.card-img-wrapper {
+    overflow: hidden;
 }
