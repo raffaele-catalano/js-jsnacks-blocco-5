@@ -121,8 +121,8 @@ for (let student of newStudentList) {
             </div>
             <div class="card-body">
                 <h5 class="card-title fs-5 text-center text_dark_rc fw-bold">${student.fullName}</h5>
-                <p class="card-text fs-6 text-center text_dark_rc">ID: ${student.id}</p>
-                <p class="card-text fs-6 text-center text_dark_rc">Grades: ${student.grades}</p>
+                <p class="card-text fs-6 text-center text_dark_rc"><span class="fw-bold">ID:</span> ${student.id}</p>
+                <p class="card-text fs-6 text-center text_dark_rc"><span class="fw-bold">Grades:</span> ${student.grades}</p>
             </div>
         </div>
     `
@@ -139,8 +139,8 @@ for (let student of studentOver70grades) {
             </div>
             <div class="card-body">
                 <h5 class="card-title fs-5 text-center text_dark_rc fw-bold">${student.fullName}</h5>
-                <p class="card-text fs-6 text-center text_dark_rc">ID: ${student.id}</p>
-                <p class="card-text fs-6 text-center text_dark_rc">Grades: ${student.grades}</p>
+                <p class="card-text fs-6 text-center text_dark_rc"><span class="fw-bold">ID:</span> ${student.id}</p>
+                <p class="card-text fs-6 text-center text_dark_rc"><span class="fw-bold">Grades:</span> ${student.grades}</p>
             </div>
         </div>
     `
@@ -158,8 +158,8 @@ for (let student of studentOver120Id) {
             </div>
             <div class="card-body" >
                 <h5 class="card-title fs-5 text-center text_dark_rc fw-bold">${student.fullName}</h5>
-                <p class="card-text fs-6 text-center text_dark_rc">ID: ${student.id}</p>
-                <p class="card-text fs-6 text-center text_dark_rc">Grades: ${student.grades}</p>
+                <p class="card-text fs-6 text-center text_dark_rc"><span class="fw-bold">ID:</span> ${student.id}</p>
+                <p class="card-text fs-6 text-center text_dark_rc"><span class="fw-bold">Grades:</span> ${student.grades}</p>
             </div>
         </div>
     `
