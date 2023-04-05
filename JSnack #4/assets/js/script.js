@@ -106,11 +106,11 @@ const studentOver120Id = studentOver70grades.filter((student) => {
 for (let student of newStudentList) {
 
     container.innerHTML += `
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 20rem; height: 11rem;">
             <div class="card-body">
                 <h5 class="card-title fs-4 text-center fw-bold">${student.fullName}</h5>
                 <p class="card-text fs-6 text-center">ID: ${student.id}</p>
-                <p class="card-text fs-5 text-center">Media Voti: ${student.grades}</p>
+                <p class="card-text fs-6 text-center">Grades: ${student.grades}</p>
             </div>
         </div>
     `
@@ -121,11 +121,11 @@ for (let student of newStudentList) {
 for (let student of studentOver70grades) {
 
     containerOver70.innerHTML += `
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 20rem; height: 11rem;">
             <div class="card-body">
                 <h5 class="card-title fs-4 text-center fw-bold">${student.fullName}</h5>
                 <p class="card-text fs-6 text-center">ID: ${student.id}</p>
-                <p class="card-text fs-5 text-center">Media Voti: ${student.grades}</p>
+                <p class="card-text fs-6 text-center">Grades: ${student.grades}</p>
             </div>
         </div>
     `
@@ -137,11 +137,11 @@ for (let student of studentOver70grades) {
 for (let student of studentOver120Id) {
 
     containerOver120.innerHTML += `
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 20rem; height: 11rem;">
             <div class="card-body">
                 <h5 class="card-title fs-4 text-center fw-bold">${student.fullName}</h5>
                 <p class="card-text fs-6 text-center">ID: ${student.id}</p>
-                <p class="card-text fs-5 text-center">Media Voti: ${student.grades}</p>
+                <p class="card-text fs-6 text-center">Grades: ${student.grades}</p>
             </div>
         </div>
     `
