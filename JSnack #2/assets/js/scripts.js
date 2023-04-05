@@ -91,8 +91,11 @@ for (let student of newStudents) {
         </div>
         <div class="card-body">
             <h5 class="card-title fs-4 text-center fw-bold">${student.fullName}</h5>
+            <p class="card-text fs-6 text-center">Matricola: ${getRandomMatricola()}</p>
             <p class="card-text fs-5 text-center">Media Voti: ${student.media}</p>
         </div>
     </div>
 `
 } 
+
+console.log(newStudents);
