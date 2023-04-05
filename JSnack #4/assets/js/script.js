@@ -31,36 +31,44 @@ const students      = [
         fullName:   'Marco della Rovere',
         id:         213,
         grades:     78,
+        image:      'marco_della_rovere.jpg'
+
     },
     {
         fullName:   'Paola Cortellesa',
         id:         110,
         grades:     96,
+        image:      'paola_cortellesa.jpg'
     },
     {
         fullName:   'Andrea Mantegna',
         id:         250,
         grades:     48,
+        image:      'andrea_mantegna.jpg'
     },
     {
         fullName:   'Gaia Borromini',
         id:         145,
         grades:     74,
+        image:      'gaia_borromini.jpg'
     },
     {
         fullName:   'Luigi Grimaldello',
         id:         196,
         grades:     68,
+        image:      'luigi_grimaldello.jpg'
     },
     {
         fullName:   'Piero della Francesca',
         id:         102,
         grades:     50,
+        image:      'piero_della_francesca.jpg'
     },
     {
         fullName:   'Francesca da Polenta',
         id:         120,
         grades:     84,
+        image:      'francesca_da_polenta.jpg'
     },
 ]
     console.log('array originale', students);
@@ -73,7 +81,8 @@ const newStudentList = students.map((student) => {
     const studentUpper = {
         fullName    : student.fullName.toUpperCase(),
         id          : student.id,
-        grades      : student.grades
+        grades      : student.grades,
+        image       : student.image
     }
 
     return studentUpper;
@@ -106,9 +115,12 @@ const studentOver120Id = studentOver70grades.filter((student) => {
 for (let student of newStudentList) {
 
     container.innerHTML += `
-        <div class="card" style="width: 20rem; height: 11rem;">
+        <div class="card" style="width: 20rem;">
+            <div class="card-img-wrapper">
+                <img src="assets/img/${student.image}" class="card-img-top">
+            </div>
             <div class="card-body">
-                <h5 class="card-title fs-4 text-center fw-bold">${student.fullName}</h5>
+                <h5 class="card-title fs-5 text-center fw-bold">${student.fullName}</h5>
                 <p class="card-text fs-6 text-center">ID: ${student.id}</p>
                 <p class="card-text fs-6 text-center">Grades: ${student.grades}</p>
             </div>
@@ -121,9 +133,12 @@ for (let student of newStudentList) {
 for (let student of studentOver70grades) {
 
     containerOver70.innerHTML += `
-        <div class="card" style="width: 20rem; height: 11rem;">
+        <div class="card" style="width: 20rem;">
+            <div class="card-img-wrapper">
+                <img src="assets/img/${student.image}" class="card-img-top">
+            </div>
             <div class="card-body">
-                <h5 class="card-title fs-4 text-center fw-bold">${student.fullName}</h5>
+                <h5 class="card-title fs-5 text-center fw-bold">${student.fullName}</h5>
                 <p class="card-text fs-6 text-center">ID: ${student.id}</p>
                 <p class="card-text fs-6 text-center">Grades: ${student.grades}</p>
             </div>
@@ -137,9 +152,12 @@ for (let student of studentOver70grades) {
 for (let student of studentOver120Id) {
 
     containerOver120.innerHTML += `
-        <div class="card" style="width: 20rem; height: 11rem;">
-            <div class="card-body">
-                <h5 class="card-title fs-4 text-center fw-bold">${student.fullName}</h5>
+        <div class="card" style="width: 20rem;">
+            <div class="card-img-wrapper">
+                <img src="assets/img/${student.image}" class="card-img-top">
+            </div>
+            <div class="card-body" >
+                <h5 class="card-title fs-5 text-center fw-bold">${student.fullName}</h5>
                 <p class="card-text fs-6 text-center">ID: ${student.id}</p>
                 <p class="card-text fs-6 text-center">Grades: ${student.grades}</p>
             </div>
