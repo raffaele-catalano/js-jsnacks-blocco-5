@@ -120,9 +120,9 @@ for (let student of newStudentList) {
                 <img src="assets/img/${student.image}" class="card-img-top">
             </div>
             <div class="card-body">
-                <h5 class="card-title fs-5 text-center fw-bold">${student.fullName}</h5>
-                <p class="card-text fs-6 text-center">ID: ${student.id}</p>
-                <p class="card-text fs-6 text-center">Grades: ${student.grades}</p>
+                <h5 class="card-title fs-5 text-center text_dark_rc fw-bold">${student.fullName}</h5>
+                <p class="card-text fs-6 text-center text_dark_rc">ID: ${student.id}</p>
+                <p class="card-text fs-6 text-center text_dark_rc">Grades: ${student.grades}</p>
             </div>
         </div>
     `
@@ -138,9 +138,9 @@ for (let student of studentOver70grades) {
                 <img src="assets/img/${student.image}" class="card-img-top">
             </div>
             <div class="card-body">
-                <h5 class="card-title fs-5 text-center fw-bold">${student.fullName}</h5>
-                <p class="card-text fs-6 text-center">ID: ${student.id}</p>
-                <p class="card-text fs-6 text-center">Grades: ${student.grades}</p>
+                <h5 class="card-title fs-5 text-center text_dark_rc fw-bold">${student.fullName}</h5>
+                <p class="card-text fs-6 text-center text_dark_rc">ID: ${student.id}</p>
+                <p class="card-text fs-6 text-center text_dark_rc">Grades: ${student.grades}</p>
             </div>
         </div>
     `
@@ -157,9 +157,9 @@ for (let student of studentOver120Id) {
                 <img src="assets/img/${student.image}" class="card-img-top">
             </div>
             <div class="card-body" >
-                <h5 class="card-title fs-5 text-center fw-bold">${student.fullName}</h5>
-                <p class="card-text fs-6 text-center">ID: ${student.id}</p>
-                <p class="card-text fs-6 text-center">Grades: ${student.grades}</p>
+                <h5 class="card-title fs-5 text-center text_dark_rc fw-bold">${student.fullName}</h5>
+                <p class="card-text fs-6 text-center text_dark_rc">ID: ${student.id}</p>
+                <p class="card-text fs-6 text-center text_dark_rc">Grades: ${student.grades}</p>
             </div>
         </div>
     `
