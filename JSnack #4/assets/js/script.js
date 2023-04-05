@@ -56,15 +56,15 @@ const students      = [
     },
     {
         fullName:   'Francesca da Polenta',
-        id:         102,
+        id:         120,
         grades:     84,
     },
 ]
-
-/////////////////////////////////////////////////////////////////////////////////
+    console.log('array originale', students);
+//////////////////////////////////////////////////////////////////////////////////
 // con map viene generato un nuovo array (newStudentList) al cui interno si 
 // destruttura la chiave "fullName" e si aggiunge il toUpperCase per avere il 
-// nome in stampatello
+// nome in maiuscolo
 const newStudentList = students.map((student) => {
 
     const studentUpper = {
@@ -74,5 +74,24 @@ const newStudentList = students.map((student) => {
     return studentUpper;
 })
 
-    console.log('nomi studenti in stampatello -->', newStudentList);
-////////////////////////////////////////////////////////////////////////////////
+    console.log('nomi studenti in maiuscolo in nuovo array -->', newStudentList);
+/////////////////////////////////////////////////////////////////////////////////
+// con filter si estrapolano gli studenti la cui media voti è superiore a 70
+const studentOver70grades = students.filter((student) => {
+    
+    if (student.grades > 70) return true;
+
+    return false;
+})
+
+    console.log('studenti con più di 70', studentOver70grades);
+/////////////////////////////////////////////////////////////////////////////////
+// con filter si estrapolano gli studenti il cui id superiore al numero a 120
+const studentOver120Id = students.filter((student) => {
+
+    if (student.id > 120) return true;
+
+    return false
+})
+
+    console.log('studenti con id superiore a 120', studentOver120Id);
