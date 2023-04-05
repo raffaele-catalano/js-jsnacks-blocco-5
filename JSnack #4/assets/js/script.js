@@ -21,7 +21,10 @@ Id      Name                              Grades
 102     Piero della Francesca               50
 120     Francesca da Polenta                84
 */
-const container     = document.querySelector('.container');
+const container         = document.querySelector('.container');
+const containerOver70   = document.querySelector('.container_over70');
+const containerOver120  = document.querySelector('.container_over120');
+
 
 const students      = [
     {
@@ -68,7 +71,9 @@ const students      = [
 const newStudentList = students.map((student) => {
 
     const studentUpper = {
-        fullName : student.fullName.toUpperCase()
+        fullName    : student.fullName.toUpperCase(),
+        id          : student.id,
+        grades      : student.grades
     }
 
     return studentUpper;
@@ -87,7 +92,7 @@ const studentOver70grades = students.filter((student) => {
     console.log('studenti con più di 70', studentOver70grades);
 /////////////////////////////////////////////////////////////////////////////////
 // con filter si estrapolano gli studenti il cui id superiore al numero a 120
-const studentOver120Id = students.filter((student) => {
+const studentOver120Id = studentOver70grades.filter((student) => {
 
     if (student.id > 120) return true;
 
@@ -95,3 +100,49 @@ const studentOver120Id = students.filter((student) => {
 })
 
     console.log('studenti con id superiore a 120', studentOver120Id);
+/////////////////////////////////////////////////////////////////////////////////
+// stampare in pagina in .container le card degli studenti con il nome in
+// maiuscolo utilizzando il for-of per prendere solo i valori senza indice
+for (let student of newStudentList) {
+
+    container.innerHTML += `
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title fs-4 text-center fw-bold">${student.fullName}</h5>
+                <p class="card-text fs-6 text-center">ID: ${student.id}</p>
+                <p class="card-text fs-5 text-center">Media Voti: ${student.grades}</p>
+            </div>
+        </div>
+    `
+}
+/////////////////////////////////////////////////////////////////////////////////
+// stampare in pagina in .container le card degli studenti che hanno media voti
+// superiore a 70 utilizzando il for-of per prendere solo i valori senza indice
+for (let student of studentOver70grades) {
+
+    containerOver70.innerHTML += `
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title fs-4 text-center fw-bold">${student.fullName}</h5>
+                <p class="card-text fs-6 text-center">ID: ${student.id}</p>
+                <p class="card-text fs-5 text-center">Media Voti: ${student.grades}</p>
+            </div>
+        </div>
+    `
+}
+/////////////////////////////////////////////////////////////////////////////////
+// stampare in pagina in .container le card degli studenti che hanno media voti
+// superiore a 70 e id superiore 120 utilizzando il for-of per prendere solo i
+// valori senza indice
+for (let student of studentOver120Id) {
+
+    containerOver120.innerHTML += `
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title fs-4 text-center fw-bold">${student.fullName}</h5>
+                <p class="card-text fs-6 text-center">ID: ${student.id}</p>
+                <p class="card-text fs-5 text-center">Media Voti: ${student.grades}</p>
+            </div>
+        </div>
+    `
+}
