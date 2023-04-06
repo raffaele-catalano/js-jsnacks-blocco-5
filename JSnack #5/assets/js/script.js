@@ -3,11 +3,11 @@ const containerLight    = document.querySelector('.container_light');
 
 const bikeShop          = [
     {
-        model:  'Gravel',
+        model:  'Cross',
         name:   'Crosshill 3.0',
         weight:  1800,
         price:   12,
-        image:  'gravel.jpg',
+        image:  'cross.jpg',
     },
     {
         model:  'Electric',
@@ -43,6 +43,6 @@ const bikeShop          = [
         weight:  5,
         price:   8000,
         image:  'fixed.jpg',
-    },
+    }
 ]
-//////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
