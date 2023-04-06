@@ -1,0 +1,31 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: whitesmoke;
+}
+
+/* hr {
+    border: 1px solid #1a236f;
+    box-shadow: 1px 1px 10px rgba(26, 35, 111, 0.8);
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition: .6s;
+}
+
+.card {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 10px rgba(26, 35, 111, 0.8);
+}
+
+.card-img-wrapper {
+    overflow: hidden;
+}
+
+.text_dark_rc {
+    color: #1a236f;
+} */
