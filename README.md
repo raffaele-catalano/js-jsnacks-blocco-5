@@ -27,3 +27,9 @@ Creare una lista di tutti gli studenti che hanno un totale di voti superiore a 7
 - Con `.map` è stato generato un nuovo array *(newStudentList)* al cui interno sono state destrutturate le chiavi ed i relativi valori dell'array originale, aggiungendo per il *'fullName* il `toUpperCase()`;
 - Con `.filter` sono stati estrapolati dapprima gli studenti la cui somma dei voti è superiore a 70 e successivamente gli studenti il cui valore numero dell'ID è superiore a 120;
 - Infine con tre cicli `for-of`sono stati stampati i pagina gli output.
+---
+JSnack #5
+===
+> Creare un array di oggetti; <br>
+Ogni oggetto descriverà una bicicletta da corsa con le seguenti proprietà: nome e peso; <br>
+Stampare in console la bicicletta con peso minore utilizzando `destructuring` ed il `template literal`.
