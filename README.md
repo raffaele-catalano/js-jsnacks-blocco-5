@@ -33,3 +33,12 @@ JSnack #5
 > Creare un array di oggetti; <br>
 Ogni oggetto descriverà una bicicletta da corsa con le seguenti proprietà: nome e peso; <br>
 Stampare in console la bicicletta con peso minore utilizzando `destructuring` ed il `template literal`.
+---
+JSnack #6
+===
+> Creare un array di oggetti di squadre di calcio; <br>
+Ogni squadra avrà diverse proprietà: *nome*, *punti*, *goal fatti*, *goal subiti*; <br>
+*Nome* sarà l'unica proprietà da compilare, le altre saranno tutte settate a 0; <br>
+Generare numeri random al posto degli 0 nelle proprietà: *punti*, *goal fatti*, *goal subiti*;<br>
+Usando la destrutturazione si crei un nuovo array i cui elementi contengono solo *nomi* e *punti*;<br>
+Stampare il tutto in *console* e in *pagina*.
