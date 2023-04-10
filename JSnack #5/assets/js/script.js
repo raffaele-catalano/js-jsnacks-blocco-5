@@ -5,8 +5,8 @@ const bikeShop          = [
     {
         model:  'Cross',
         name:   'Crosshill 3.0',
-        weight:  1800,
-        price:   12,
+        weight:  12,
+        price:   1800,
         image:  'cross.jpg',
     },
     {
