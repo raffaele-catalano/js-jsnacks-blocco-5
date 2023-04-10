@@ -1,13 +1,13 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: whitesmoke;
+    background-color: #232327;
 }
-/* 
+
 hr {
     border: 1px solid #1a236f;
     box-shadow: 1px 1px 10px rgba(26, 35, 111, 0.8);
 }
-
+/* 
 img:hover {
     transform: scale(1.1);
     transition: .6s;
