@@ -81,7 +81,9 @@ for (let bikes of bikeList) {
 `
 }
 ////////////////////////////////////////////////////////////////////////////////
-// con .reduce confronto il valore di una specifica key dell'array di oggetti
+// con .reduce si confronta il valore di una specifica key dell'array di 
+// oggetti (bikeList) ed in questo caso si estrae quello dal valore della chiave
+// 'weight' più basso
 const lightWeight = bikeList.reduce(function(a, b) {
     if (a.weight < b.weight) {
         return a
@@ -91,7 +93,7 @@ const lightWeight = bikeList.reduce(function(a, b) {
 })
 
     console.log('la più leggera', lightWeight);
-
+// stampa in pagina in uno specifico container 
 containerLight.innerHTML = `
     <div class="card" style="width: 20rem;">
         <div class="card-img-wrapper">
