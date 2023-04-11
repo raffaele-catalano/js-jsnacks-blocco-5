@@ -101,9 +101,9 @@ newLeagueTable.sort(function(a, b){
     return b.goalFatti - a.goalFatti
 });
 //////////////////////////////////////////////////////////////////////////
-// con un ciclo for-of dapprima viene stampata in pagina, la classifica
+// con un ciclo forEach dapprima viene stampata in pagina, la classifica
 // con tutte le squadre che compongono la lega e tutte le relative *keys*
-for (let team of leagueTable) 
+leagueTable.forEach(team => {
 
     ulFull.innerHTML += `
         <li class="list-group-item border border-dark">
@@ -116,11 +116,11 @@ for (let team of leagueTable)
             </div>
         </li>
     `
-
+})
 //////////////////////////////////////////////////////////////////////////
-// con un ciclo for-of viene stampata in pagina, la classifica delle 
+// con un ciclo forEach viene stampata in pagina, la classifica delle 
 // squadre ma esclusivamente con il nome, il logo e i goalFatti
-for (let team of newLeagueTable) {
+newLeagueTable.forEach(team => {
 
     ulGoal.innerHTML += `
     <li class="list-group-item border border-dark">
@@ -131,7 +131,7 @@ for (let team of newLeagueTable) {
         </div>
     </li>
 `
-}
+})
 //-------------------------------FUNCTIONS---------------------------------
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
