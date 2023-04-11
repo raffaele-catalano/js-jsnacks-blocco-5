@@ -76,11 +76,13 @@ const students      = [
 // nome in maiuscolo
 const newStudentList = students.map((student) => {
 
+    const {fullName, id, grades, image} = student;
+
     const studentUpper = {
-        fullName    : student.fullName.toUpperCase(),
-        id          : student.id,
-        grades      : student.grades,
-        image       : student.image
+        fullName    : fullName.toUpperCase(),
+        id,      
+        grades,      
+        image,     
     }
 
     return studentUpper;
@@ -89,65 +91,57 @@ const newStudentList = students.map((student) => {
     console.log('nomi studenti in maiuscolo in nuovo array -->', newStudentList);
 /////////////////////////////////////////////////////////////////////////////////
 // con filter si estrapolano gli studenti la cui media voti è superiore a 70
-const studentOver70grades = students.filter((student) => {
-    
-    if (student.grades > 70) return true;
+const studentOver70grades = students.filter((student) => (student.grades > 70))
 
-    return false;
-})
 
     console.log('studenti con più di 70', studentOver70grades);
 /////////////////////////////////////////////////////////////////////////////////
 // con filter si estrapolano gli studenti il cui id superiore al numero a 120
-const studentOver120Id = studentOver70grades.filter((student) => {
+const studentOver120Id = studentOver70grades.filter((student) => (student.id > 120))
 
-    if (student.id > 120) return true;
-
-    return false
-})
 
     console.log('studenti con id superiore a 120', studentOver120Id);
 /////////////////////////////////////////////////////////////////////////////////
 // stampare in pagina in .container le card degli studenti con il nome in
 // maiuscolo utilizzando il for-of per prendere solo i valori senza indice
-for (let student of newStudentList) {
+newStudentList.forEach(student => {
 
     container.innerHTML += `
-        <div class="card" style="width: 20rem;">
-            <div class="card-img-wrapper">
-                <img src="assets/img/${student.image}" class="card-img-top">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title fs-5 text-center text_dark_rc fw-bold">${student.fullName}</h5>
-                <p class="card-text fs-6 text-center text_dark_rc"><span class="fw-bold">ID:</span> ${student.id}</p>
-                <p class="card-text fs-6 text-center text_dark_rc"><span class="fw-bold">Grades:</span> ${student.grades}</p>
-            </div>
+    <div class="card" style="width: 20rem;">
+        <div class="card-img-wrapper">
+            <img src="assets/img/${student.image}" class="card-img-top">
         </div>
+        <div class="card-body">
+            <h5 class="card-title fs-5 text-center text_dark_rc fw-bold">${student.fullName}</h5>
+            <p class="card-text fs-6 text-center text_dark_rc"><span class="fw-bold">ID:</span> ${student.id}</p>
+            <p class="card-text fs-6 text-center text_dark_rc"><span class="fw-bold">Grades:</span> ${student.grades}</p>
+        </div>
+    </div>
     `
-}
+})
 /////////////////////////////////////////////////////////////////////////////////
 // stampare in pagina in .container le card degli studenti che hanno media voti
 // superiore a 70 utilizzando il for-of per prendere solo i valori senza indice
-for (let student of studentOver70grades) {
+studentOver70grades.forEach(student => {
 
     containerOver70.innerHTML += `
-        <div class="card" style="width: 20rem;">
-            <div class="card-img-wrapper">
-                <img src="assets/img/${student.image}" class="card-img-top">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title fs-5 text-center text_dark_rc fw-bold">${student.fullName}</h5>
-                <p class="card-text fs-6 text-center text_dark_rc"><span class="fw-bold">ID:</span> ${student.id}</p>
-                <p class="card-text fs-6 text-center text_dark_rc"><span class="fw-bold">Grades:</span> ${student.grades}</p>
-            </div>
+    <div class="card" style="width: 20rem;">
+        <div class="card-img-wrapper">
+            <img src="assets/img/${student.image}" class="card-img-top">
         </div>
+        <div class="card-body">
+            <h5 class="card-title fs-5 text-center text_dark_rc fw-bold">${student.fullName}</h5>
+            <p class="card-text fs-6 text-center text_dark_rc"><span class="fw-bold">ID:</span> ${student.id}</p>
+            <p class="card-text fs-6 text-center text_dark_rc"><span class="fw-bold">Grades:</span> ${student.grades}</p>
+        </div>
+    </div>
     `
-}
+})
 /////////////////////////////////////////////////////////////////////////////////
 // stampare in pagina in .container le card degli studenti che hanno media voti
 // superiore a 70 e id superiore 120 utilizzando il for-of per prendere solo i
 // valori senza indice
-for (let student of studentOver120Id) {
+studentOver120Id.forEach(student => {
 
     containerOver120.innerHTML += `
         <div class="card" style="width: 20rem;">
@@ -161,4 +155,6 @@ for (let student of studentOver120Id) {
             </div>
         </div>
     `
-}
+}) 
+
+
