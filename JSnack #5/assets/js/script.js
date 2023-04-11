@@ -51,20 +51,22 @@ const bikeShop          = [
 // il .toUpperCase() per il parametro 'model'
 const bikeList = bikeShop.map((bikes) => {
 
+    const {model, name, weight, price, image} = bikes;
+
     const bike = {
         model   : bikes.model.toUpperCase(),
-        name    : bikes.name,
-        weight  : bikes.weight,
-        price   : bikes.price,
-        image   : bikes.image,
+        name,  
+        weight,  
+        price,  
+        image,  
     }
 
     return bike;
 })
     console.log('nuovo array bikeList -->',bikeList);
 ////////////////////////////////////////////////////////////////////////////////
-// il contentuto viene stampato in pagina con un ciclo for-of
-for (let bikes of bikeList) {
+// il contentuto viene stampato in pagina con un ciclo forEach
+bikeList.forEach(bikes => {
 
     container.innerHTML += `
     <div class="card" style="width: 20rem;">
@@ -78,9 +80,9 @@ for (let bikes of bikeList) {
             <p class="card-text fs-6 text-center text_dark_rc"><span class="fw-bold">Prezzo:</span> ${bikes.price} €</p>
         </div>
     </div>
-`
-}
-////////////////////////////////////////////////////////////////////////////////
+    `
+})
+//////////////////////////////////////////////////////////////////////////////////
 // con .reduce si confronta il valore di una specifica key dell'array di 
 // oggetti (bikeList) ed in questo caso si estrae quello dal valore della chiave
 // 'weight' più basso
